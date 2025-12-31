@@ -19,40 +19,32 @@
                 background-color: #f2f2f2;
                 padding: 25px;
             }
-            
-           * {box-sizing: border-box;}
 
-            body {font-family: Verdana, sans-serif;}
+            #logo img{
+                max-width: 50%;
+                margin-top: 50px;
+            }
+            
+           /* {box-sizing: border-box;}*/
+
+            body {
+                font-family: Verdana, sans-serif;
+            }
+
             .mySlides {display: none;}
             .mySlides img {vertical-align: middle;}
 
             /* Slideshow container */
             .slideshow-container {
-                max-width: fit-content;
+                max-width: max-content;
                 position: relative;
                 margin: 0 auto;
-            }
-
-            /* Number text (1/3 etc) */
-            .numbertext {
-                color: #f2f2f2;
-                font-size: 12px;
-                padding: 8px 12px;
-                position: absolute;
-                top: 0;
+                padding: 0px;
             }
 
             /* The dots/bullets/indicators */
-            .dot {
-                height: 15px;
-                width: 15px;
-                margin: 0 2px;
-                background-color: #bbb;
-                border-radius: 50%;
-                display: inline-block;
-                transition: background-color 0.6s ease;
-            }
-            .active {a
+            
+            .active a{
                 background-color: #717171;
             }
 
@@ -74,13 +66,43 @@
 
             #welcomepg p {
                 font-size: 1.5em;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                margin: 2.5em;
+                margin-top: 0px;
             }
             #welcomepg h2 {
                 color: rgb(148, 41, 22);
-                font-family: 'Times New Roman', Times, serif;
-                font-size: 3em;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 4em;
+                padding-top: 20px;
+                padding-bottom: 10px;
             }
 
+            .dropdown {
+                position: relative;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 130px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                padding: 12px 16px;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            #welcome {
+                background-color: #abd3e6;
+                background-image: linear-gradient(to bottom, white, #abd3e6);
+                text-align: center;
+                opacity: 0.9;
+            }
+            
+            
         </style>
     </head>
     <body>
@@ -107,28 +129,34 @@
         </nav>
             
         <div class="container">
-            <div id="logo" style="text-align: center;"><img src="logo.PNG" style="width: 300px;"></div>
+            <div id="logo" style="text-align: center;">
+                <img src="logo.PNG" style="width: 300px;">
+            </div>
         </div>
         <hr>
-        <div class="slideshow-container">
+        <div class="container-fluid">
+            <div class="slideshow-container">
 
-            <div class="mySlides fade">
-                <img src="e_Z636010.png" style="width:100%">
-                <!--<div class="text">Caption Text</div>-->
+                <div class="mySlides fade">
+                    <img src="e_Z636010.png" style="width:100%">
+                    <!--<div class="text">Caption Text</div>-->
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="e_Z636130.png" style="width:100%">
+                    <!--<div class="text">Caption Two</div>-->
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="e_Z636087.png" style="width:100%">
+                    <!--<div class="text">Caption Three</div>-->
+                </div>
+
             </div>
-
-            <div class="mySlides fade">
-                <img src="e_Z636130.png" style="width:100%">
-                <!--<div class="text">Caption Two</div>-->
-            </div>
-
-            <div class="mySlides fade">
-                <img src="e_Z636087.png" style="width:100%">
-                <!--<div class="text">Caption Three</div>-->
-            </div>
-
         </div>
+            <hr>
             <br>
+
     
         <!--<div class="parent">
             <div class="slides">
@@ -162,11 +190,43 @@
                 <button type="button" class="btn btn-primary btn-lg">Book Now</button>
             </div>
             <br>
+        </div>
+        <div class="container-fluid" id="welcome">
             <div id="welcomepg">
                 <h2>Welcome To Randy Rock Photography</h2>
                 <p>We specialize in capturing the playful and energetic moments of your beloved pets. Our photos will make you laugh and cherish their memories forever.</p>
             </div>
+            <div class="container" >
+                <div class="about">
+                    <h3>About</h3>
+                    <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
+                </div>
+            </div>
         </div>
+
+        <!--<div class="container">
+            <div class="faq">
+                <div>
+                    <h3>Frequently Asked Questions (FAQs)</h3>
+                </div>
+                <div class="dropdown">How do I schedule a photo session for my pet?
+                    <div class="dropdown-content">To schedule a photo session, simply choose a package, time, and date on the Booking page calendar.  </div>
+                </div>
+                <div class="dropdown">What should I expect during a photo session with Randy Rock Photography?
+                    <div class="dropdown-content">During a photo session, we will work with you and your pet to capture their unique personality and spirit. We aim to make the experience fun and enjoyable for both you and your pet.</div>
+                </div>
+                <div class="dropdown">When will I recieve my finished photos?
+                    <div class="dropdown-content">Finished photos will be delivered via a convenient Google Drive link within 7 business days of your shoot.  You can download your full size images from that link.</div>
+                </div>
+                <div class="dropdown">Do I need to bring treats to the shoot?
+                    <div class="dropdown-content">No, treats are provided.  The only scenario where you would need to bring treats is if your dog has a specific type of treat that they need due to allergies, etc.</div>
+                </div>
+                <div class="dropdown">Do you offer any special packages for multiple pets or events?
+                    <div class="dropdown-content">Yes, we offer special packages for multiple pets or events. Contact us for more information on our package options.</div>
+                </div>
+            </div>
+        </div>-->
 
         <script>
             let slideIndex = 0;
