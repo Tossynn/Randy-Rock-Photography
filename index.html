@@ -11,9 +11,12 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
         <style>
-            body {
-                font-family: Verdana, sans-serif;
+            body, html {
+                font-family: Arial, Helvetica, sans-serif;
+                height: 100%;
+                margin: 0;
             }
+            * {box-sizing: content-box;}
             .navbar {
                 margin-bottom: 0;
                 border-radius: 0;
@@ -54,30 +57,6 @@
                 margin: 0 auto;
                 padding: 0px;
             }
-
-            
-
-            /* The dots/bullets/indicators *
-            
-            .active a{
-                background-color: #717171;
-            }
-
-            /* Fading animation *
-            .fade {
-                animation-name: fade;
-                animation-duration: 1.5s;
-            }
-
-            /*@keyframes fade {
-                from {opacity: .4} 
-                to {opacity: 1}
-            }
-
-            /* On smaller screens, decrease text size *
-            @media only screen and (max-width: 300px) {
-            .text {font-size: 11px}
-            } */
         
             #welcomepg p {
                 font-size: 1.5em;
@@ -123,14 +102,30 @@
                 font-size: 40px;
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             }
-
-            .Gallery h3 {
-                text-align: center;
+            .bg-image1 {
                 background-image: url(e_Z636087.png);
-                font-size: 40px;
-                margin: 0px;
-                padding-top: 5%;
                 filter: blur(8px);
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+            }
+            .gallery-container {
+                position: absolute;
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0, 0.4);
+                color: white;
+                font-weight: bold;
+                border: 3px solid #f1f1f1;
+                position: absolute;
+                /*top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;*/
+                width: 80%;
+                padding: 20px;
+                text-align: center;
             }
             
         </style>
@@ -167,40 +162,6 @@
             </div>
         </header>
         <hr>
-        <!--<div class="container-fluid" id="slide-box">
-            <div class="slideshow-container">
-
-                <div class="mySlides fade">
-                    <img src="e_Z636010.png" style="width:100%">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="e_Z636019.png" style="width:100%">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="e_Z636043.png" style="width:100%">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="e_Z636130.png" style="width:100%">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="e_Z636216.png" style="width:100%">
-                </div>
-
-            </div>
-        </div>
-        <div style="text-align: center;">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-        </div>
-            <hr>
-            <br>-->
 
         <div class="container-fluid" id="slide-box">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -265,12 +226,20 @@
                 <div id="about">
                     <h3>About</h3>
                     <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
+                    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <div class="bg-image1"></div>
         <div class="container">
-            <div class="Gallery">
+            <div class="gallery-container">
                 <h3>Gallery</h3>
                 <table>
                     <tr>
