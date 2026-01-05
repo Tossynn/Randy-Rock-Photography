@@ -89,6 +89,9 @@
                 display: block;
             }
 
+            #book-now {
+                bottom: 10%;
+            }
             #welcome {
                 background-color: #abd3e6;
                 background-image: linear-gradient(to bottom, white, #abd3e6);
@@ -110,6 +113,27 @@
                 background-repeat: no-repeat;
                 background-size: cover;
 
+            }
+            .appointment_btn {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: larger;
+                text-align: right;
+                padding-right: 1em;
+                text-transform: capitalize;
+            }
+            .appointment_btn a:link, a:visited{
+                color: rgb(255, 255, 255);
+                background-color: rgb(101, 137, 235);
+                padding: 15px 25px;
+                text-align: center;
+                display: inline-block;
+                text-decoration: none;
+                border-radius: 25px;
+            }
+            .appointment_btn a:hover, a:active{
+                background-color: rgb(191, 211, 241);
+                font-weight: bolder;
+                color: red;
             }
             .gallery-container {
                 position: absolute;
@@ -281,13 +305,12 @@
             </a>
         </div> 
         <br>       
-
-        <div class="container" style="text-align: center;">
-            <div>
+            <!--<div class="container" id="book-now" style="text-align: center;">
                 <button type="button" class="btn btn-primary btn-lg">Create Appointment</button>
+            </div>-->
+            <div class="appointment_btn">
+                <a href="#">Make An Appointment!</a>
             </div>
-            <br>
-        </div>
         <div class="container-fluid" id="welcome">
             <div id="welcomepg">
                 <h2>Welcome To Randy Rock Photography</h2>
@@ -384,5 +407,3 @@
         </script>
     </body>
 </html>
-
-
